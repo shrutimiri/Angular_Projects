@@ -1,0 +1,11 @@
+.example-card {
+    max-width: 800px;
+    display: block;
+    margin: 0 auto;
+  }
+  
+  .example-header-image {
+    background-image: url('https://www.pngall.com/wp-content/uploads/12/Avatar-Profile-PNG.png');
+    background-size: cover;
+  }
+  

@@ -1,0 +1,69 @@
+<mat-card *ngIf="userDetail" class="example-card">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title>{{userDetail.firstName}} {{userDetail.lastName}}</mat-card-title>
+      <mat-card-subtitle>{{userDetail.email}}</mat-card-subtitle>
+    </mat-card-header>
+   
+    <mat-card-content>
+      <mat-list>
+        <mat-list-item>
+            <div>
+                Mobile No:
+                <button mat-button>{{userDetail.mobile}}</button>
+            </div>
+        </mat-list-item>
+
+        <mat-list-item>
+            <div>
+                Gender:
+                <button mat-button>{{userDetail.gender}}</button>
+            </div>
+        </mat-list-item>
+
+        <mat-list-item>
+            <div>
+                Package:
+                <button mat-button>{{userDetail.package}}</button>
+            </div>
+        </mat-list-item>
+
+        <mat-list-item>
+            <div>
+                BMI :
+                <button mat-button>{{userDetail.bmi}}</button>
+            </div>
+        </mat-list-item>
+
+        <mat-list-item>
+            <div>
+                 BMI Result:
+                <button mat-button>{{userDetail.bmiResult}}</button>
+            </div>
+        </mat-list-item>
+
+        <mat-list-item>
+            <div>
+                Trainee Require:
+                <button mat-button>{{userDetail.requireTrainer}}</button>
+            </div>
+        </mat-list-item>
+
+        <mat-list-item>
+            <div>
+                Goals:
+                <button mat-button>
+                    <mat-chip-listbox>
+                        <ng-container *ngFor="let row of userDetail.important">
+                            <mat-chip-option sele ted>{{row}}</mat-chip-option>
+                        </ng-container>
+                    </mat-chip-listbox>
+                </button>
+            </div>
+        </mat-list-item>
+
+      </mat-list>
+    </mat-card-content>
+   
+</mat-card>
+  
